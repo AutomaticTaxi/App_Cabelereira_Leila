@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">App_Cabelereira_Leila</string>
+    <string name="app_login">Login</string>
+    <string name="EditTextNome">Insira o nome da cabelereira</string>
+    <string name="EditTexTelefone">Insira o telefone </string>
+    <string name="BtVoltar">Voltar </string>
+    <string name="BtCastroEmail">Cadastre-se</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>

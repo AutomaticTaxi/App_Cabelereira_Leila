@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "871813324731",
+    "firebase_url": "https://testefirebase-6c879-default-rtdb.firebaseio.com",
+    "project_id": "testefirebase-6c879",
+    "storage_bucket": "testefirebase-6c879.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871813324731:android:50cbbc94427db662602e9e",
+        "android_client_info": {
+          "package_name": "com.example.app_cabelereira_leila"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871813324731-qgmd1ua51vj9420k4imsc7ngaa48dv15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_cabelereira_leila",
+            "certificate_hash": "a4bfd41f8663843272272f374e97ed0835c5e75f"
+          }
+        },
+        {
+          "client_id": "871813324731-nn23jbd6r7r2etnabi7adm169vdbq9ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBag69fDkOt_bIuwkJnX2KNjltyrKrHfK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871813324731-nn23jbd6r7r2etnabi7adm169vdbq9ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
