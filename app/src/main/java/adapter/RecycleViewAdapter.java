@@ -26,7 +26,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<CabelereiraViewHold
     public CabelereiraViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.item_recycle_view,parent,false);
+        View view = inflater.inflate(R.layout.item_recycleview2,parent,false);
         return new CabelereiraViewHolder(view);
     }
 

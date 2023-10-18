@@ -47,8 +47,7 @@ public class Tela_Pricipal extends AppCompatActivity {
         VincularXML();
         acoes();
         lista= new LinkedList();
-        //FireBaseLer();
-        //preencher();
+        FireBaseLer();
         RecycleViewAdapter recycleViewAdapter = new RecycleViewAdapter(lista);
         recyclerView.setAdapter(recycleViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -56,16 +55,10 @@ public class Tela_Pricipal extends AppCompatActivity {
 
 
     }
-    public void preencher(){
-        Cabelereiras cabelereiras = new Cabelereiras();
-        cabelereiras.Nome="Lucas";
-        cabelereiras.Telefone="54534535";
-        cabelereiras.Avaliacao=5F;
-        lista.add(cabelereiras);
-    }
+
     public void FireBaseSalvar(Cabelereiras cabelereiras){
         DatabaseReference cabelereirasbd =databaseReference.child("Cabelereiras");
-        cabelereirasbd.setValue(cabelereiras);
+        cabelereirasbd.push().setValue(cabelereiras);
     }
     public void FireBaseLer(){
         DatabaseReference Cabelereiras =  databaseReference.child("Cabelereiras");
@@ -76,8 +69,8 @@ public class Tela_Pricipal extends AppCompatActivity {
                 Log.i("FireBase",snapshot.getValue().toString());
                 for (DataSnapshot dados:snapshot.getChildren()){
                    // Log.i("FireBase",dados.child("01").getValue().toString());
-                    Cabelereiras cabelereiras = dados.getValue(Model.Cabelereiras.class) ;
-                    lista.add(cabelereiras);
+
+                    lista.add(dados.getValue(Model.Cabelereiras.class));
                 }
 
             }
@@ -112,11 +105,11 @@ public class Tela_Pricipal extends AppCompatActivity {
 
 
                     Cabelereiras cabelereiras = new Cabelereiras();
-                    cabelereiras.Nome = Nome.getText().toString();
-                    cabelereiras.Telefone = Telefone.getText().toString();
-                    cabelereiras.Avaliacao = Avaliacao.getRating();
-                    lista.add(cabelereiras);
+                    cabelereiras.setNome(Nome.getText().toString());
+                    cabelereiras.setTelefone(Telefone.getText().toString());
+                    cabelereiras.setAvaliacao(Avaliacao.getRating());
 
+                    FireBaseSalvar(cabelereiras);
 
 
 
