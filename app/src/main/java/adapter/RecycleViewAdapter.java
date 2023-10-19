@@ -14,11 +14,14 @@ import java.util.List;
 
 import Model.Cabelereiras;
 import ViewHolder.CabelereiraViewHolder;
+import ViewHolder.OnListClick;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<CabelereiraViewHolder> {
     private List<Cabelereiras> mList;
-    public RecycleViewAdapter(List<Cabelereiras> list) {
+    private OnListClick mListClick;
+    public RecycleViewAdapter(List<Cabelereiras> list, OnListClick listener) {
         this.mList= list;
+        this.mListClick= listener;
     }
 
     @NonNull
@@ -33,7 +36,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<CabelereiraViewHold
     @Override
     public void onBindViewHolder(@NonNull CabelereiraViewHolder holder, int position) {
         Cabelereiras cabelereiras = this.mList.get(position);
-        holder.bind(cabelereiras);
+        holder.bind(cabelereiras,this.mListClick);
     }
 
     @Override

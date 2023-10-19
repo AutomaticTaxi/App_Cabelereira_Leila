@@ -27,6 +27,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import Model.Cabelereiras;
+import ViewHolder.OnListClick;
 import adapter.RecycleViewAdapter;
 
 public class Tela_Pricipal extends AppCompatActivity {
@@ -48,9 +49,21 @@ public class Tela_Pricipal extends AppCompatActivity {
         acoes();
         lista= new LinkedList();
         FireBaseLer();
-        RecycleViewAdapter recycleViewAdapter = new RecycleViewAdapter(lista);
+        OnListClick CabelereirasListener = new OnListClick() {
+            @Override
+            public void onClickDelete(String nome, String telefone, Float avaliacao) {
+
+            }
+
+            @Override
+            public void onClickEditar(String nome, String telefone, Float avaliacao) {
+
+            }
+        };
+        RecycleViewAdapter recycleViewAdapter = new RecycleViewAdapter(lista,CabelereirasListener);
         recyclerView.setAdapter(recycleViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
 
 
 
