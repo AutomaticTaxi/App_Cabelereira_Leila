@@ -15,5 +15,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="BtExcluir">Excluir</string>
     <string name="BtEditar">Editar</string>
+    <string name="TextviewpopNome">Atualizar Cabelereira</string>
 
 </resources>

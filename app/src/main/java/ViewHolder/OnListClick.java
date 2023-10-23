@@ -1,6 +1,8 @@
 package ViewHolder;
 
+import Model.Cabelereiras;
+
 public interface OnListClick {
-    void onClickDelete(String nome,String telefone, Float avaliacao);
-    void onClickEditar(String nome,String telefone, Float avaliacao);
+    void onClickDelete(Cabelereiras cabelereiras,int pos);
+    void onClickEditar(Cabelereiras cabelereiras,int pos);
 }

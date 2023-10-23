@@ -1,6 +1,7 @@
 package ViewHolder;
 
-import android.content.Intent;
+
+
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
@@ -31,23 +32,26 @@ public class CabelereiraViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bind(Cabelereiras cabelereiras,OnListClick listener) {
+    public void bind(Cabelereiras cabelereiras, OnListClick listener, int position){
         this.textView1.setText("Nome: " + cabelereiras.getNome().toString());
         this.textView2.setText("Telefone: " + cabelereiras.getTelefone().toString());
         this.ratingBar.setRating(cabelereiras.getAvaliacao().floatValue());
         this.BtExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onClickDelete(cabelereiras.getNome(),cabelereiras.getTelefone(),cabelereiras.getAvaliacao());
+                listener.onClickDelete(cabelereiras,position);
 
             }
         });
         this.BtEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onClickEditar(cabelereiras.getNome(),cabelereiras.getTelefone(),cabelereiras.getAvaliacao());
+                listener.onClickEditar(cabelereiras,position);
 
-            }
+
+                }
+
+
         });
     }
 }

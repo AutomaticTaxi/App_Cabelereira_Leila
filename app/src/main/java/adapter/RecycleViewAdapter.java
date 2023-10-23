@@ -36,7 +36,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<CabelereiraViewHold
     @Override
     public void onBindViewHolder(@NonNull CabelereiraViewHolder holder, int position) {
         Cabelereiras cabelereiras = this.mList.get(position);
-        holder.bind(cabelereiras,this.mListClick);
+        holder.bind(cabelereiras,this.mListClick,position);
     }
 
     @Override
