@@ -120,7 +120,7 @@ public class Tela_Pricipal extends AppCompatActivity {
     public void FireBaseRemover(String nome){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Excluir");
-        builder.setMessage("Deseja Realmente ");
+        builder.setMessage("Deseja Realmente Excluir ");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -194,14 +194,13 @@ public class Tela_Pricipal extends AppCompatActivity {
 
     }
 
-
-
     public void FireBaseSalvar(Cabelereiras cabelereiras){
         DatabaseReference cabelereirasbd =databaseReference.child("Cabelereiras");
         cabelereirasbd.push().setValue(cabelereiras);
         recycleViewAdapter.notifyDataSetChanged();
 
     }
+
     public void FireBaseLer(){
         DatabaseReference Cabelereiras =  databaseReference.child("Cabelereiras");
         Cabelereiras.addValueEventListener(new ValueEventListener() {
@@ -229,6 +228,7 @@ public class Tela_Pricipal extends AppCompatActivity {
             }
         });
     }
+
     public void VincularXML(){
         Nome = findViewById(R.id.editTextNome);
         Telefone = findViewById(R.id.editTextPhone);
@@ -240,6 +240,7 @@ public class Tela_Pricipal extends AppCompatActivity {
         BtEditar.setVisibility(View.INVISIBLE);
 
     }
+
     public void acoes(){
 
         BtVolvar.setOnClickListener(new View.OnClickListener() {
@@ -270,6 +271,7 @@ public class Tela_Pricipal extends AppCompatActivity {
             }
         });
     }
+
     public void limpar_campos(){
         Nome.setText("");
         Telefone.setText("");
