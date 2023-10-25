@@ -93,12 +93,17 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG).show();
                         Log.d("Erro: ",apiException.toString());
                     }
+                }else if (result.getResultCode() == Activity.RESULT_CANCELED){
+                    Toast.makeText(getApplicationContext(), "Nenhum Usuário Google logado .",
+                            Toast.LENGTH_LONG).show();
+                    Log.d("Erro: ",result.toString());
+
                 }
             }
     );
     private void Login_Google(String token){
         AuthCredential credential = GoogleAuthProvider.getCredential(token,null);
-        mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithCredential(credential).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){

@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "871813324731-tq1vvg17qq6s6sr80tncpbq3g18lm7gp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_cabelereira_leila",
+            "certificate_hash": "21ae20cc0d491d1ad679c1aa48c950e4d7da33fd"
+          }
+        },
+        {
           "client_id": "871813324731-nn23jbd6r7r2etnabi7adm169vdbq9ek.apps.googleusercontent.com",
           "client_type": 3
         }

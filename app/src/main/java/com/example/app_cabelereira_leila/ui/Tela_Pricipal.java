@@ -90,8 +90,9 @@ public class Tela_Pricipal extends AppCompatActivity {
                             cabelereiraAtualizada.setTelefone(Telefone.getText().toString());
                             cabelereiraAtualizada.setAvaliacao(Avaliacao.getRating());
                             FireBaseUpdate(Nome_da_cabelereira_clicada, cabelereiraAtualizada);
-                            recycleViewAdapter.notifyDataSetChanged();
+
                             FireBaseLer();
+                            recycleViewAdapter.notifyDataSetChanged();
                             limpar_campos();
 
 
@@ -217,7 +218,7 @@ public class Tela_Pricipal extends AppCompatActivity {
 
                         lista.add(dados.getValue(Model.Cabelereiras.class));
                     }
-
+                    recycleViewAdapter.notifyDataSetChanged();
                 }
 
             }
